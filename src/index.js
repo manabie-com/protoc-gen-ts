@@ -88,7 +88,7 @@ for (const fileDescriptor of request.proto_file) {
   );
 
   // Wrap statements within the namespace
-  if (fileDescriptor.package) {
+  if (false) { // dont create namespace for manabie
 
     statements = [
       doNotEditComment,
@@ -122,7 +122,7 @@ for (const fileDescriptor of request.proto_file) {
     content
   }));
 
-  // after each iteration we need to clear the dependency map to prevent accidental 
+  // after each iteration we need to clear the dependency map to prevent accidental
   // misuse of identifiers
   type.resetDependencyMap();
 }
